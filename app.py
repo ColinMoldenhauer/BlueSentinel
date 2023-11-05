@@ -61,7 +61,7 @@ mpas = {"Calais": {
     [200, 1200],
     [100, 500]
 ]},
-        "Starit of Gibraltar": {
+        "Strait of Gibraltar": {
     'latitude': 35.949766,
     'longitude': -5.543646,
     'delta_x': 0.65,
@@ -154,8 +154,9 @@ if 'sh_client_id' in st.secrets:
     try:
         CLIENT_ID = st.secrets['sh_client_id']
         CLIENT_SECRET = st.secrets['sh_client_secret']
-        config.sh_client_id = CLIENT_ID
-        config.sh_client_secret = CLIENT_SECRET
+        if len(CLIENT_ID) > 0 and len(CLIENT_SECRET) > 0:
+            config.sh_client_id = CLIENT_ID
+            config.sh_client_secret = CLIENT_SECRET
     except:
         pass
 
