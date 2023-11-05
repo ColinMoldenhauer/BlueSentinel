@@ -1,0 +1,8 @@
+streamlit
+numpy
+pandas
+pydeck
+sentinelhub
+matplotlib
+scipy
+opencv-python
