@@ -77,17 +77,18 @@ mpas = {"Calais": {
 
         },
         "Le Havre": {
-    'latitude': 49.445908,
-    'longitude':  -0.075550,
+    'latitude': 49.369561,
+    'longitude':   -0.197893,
     'delta_x': 0.65,
     'delta_y': 0.21,
     'polygon': [
-    [180, 280],
-    [450, 50],
-    [850, 150],
-    [430, 650],
-    [160, 800],
-    [70, 550]
+    [250, 450],
+    [230, 850],
+    [200, 1200],
+    [500, 1200],
+    [780, 800],
+    [800, 550],
+    [680, 450]
 ]
         }
 }
@@ -149,11 +150,14 @@ function evaluatePixel(samples) {
 
 
 config = SHConfig()
-CLIENT_ID = ""
-CLIENT_SECRET = ""
-if CLIENT_ID and CLIENT_SECRET:
-    config.sh_client_id = CLIENT_ID
-    config.sh_client_secret = CLIENT_SECRET
+if 'sh_client_id' in st.secrets:
+    try:
+        CLIENT_ID = st.secrets['sh_client_id']
+        CLIENT_SECRET = st.secrets['sh_client_secret']
+        config.sh_client_id = CLIENT_ID
+        config.sh_client_secret = CLIENT_SECRET
+    except:
+        pass
 
 @st.cache_resource
 def get_satelite_image(bbox, size, time_interval):
