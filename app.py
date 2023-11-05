@@ -33,16 +33,11 @@ st.sidebar.image('ims/Environmental_Justice_Foundation_logo.png', width=150)
 
 st.sidebar.markdown("# Blue Sentinel")
 st.sidebar.write(
-    """## Why are we here?
+    """## What is this?
 
-Marine ecosystems and global food security are under direct threat from illicit and unsustainable fishing practices, notably bottom trawling. These actions compromise the very foundation of fisheries that numerous communities rely upon for sustenance.
-
-On behalf of the Environmental Justice Foundation, we using advanced satellite tech solutions to precisely pinpoint these harmful fishing activities in real-time, especially within protected marine zones. 
-
-## Objective
-
-Develop a comprehensive monitoring tool to capture precise data on trawling activities and their impacts within marine protected areas (MPAs), given the challenges posed by the vastness and depth of oceans."""
-
+This is our MVP for the [Blue Sentinel project](https://taikai.network/cassinihackathons/hackathons/intdev-humaid/projects/clo4aluu40212uq01n5omhc4c/idea).
+We can moderate Marine Protected Areas (MPAs) using satellite imagery from ESA's Sentinel-1 satellite. Our tool uses computer vision algorithms to detect ships in these areas using C-band synthetic-aperture radar (SAR) images.
+"""
 )
 
 st.image('ims/logo.png', width=300)
